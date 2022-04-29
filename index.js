@@ -29,6 +29,16 @@ app.use('/js', express.static(path.resolve(__dirname, "assets/js")));
 // app.get('/', (req, res) => { res.send('Server CRUD Application.') })
 app.get('/', (req, res) => {
     res.render('index');
+});
+
+// Connecting to the Add User form.
+app.get('/add-user', (req, res) => {
+    res.render('add_user');
+});
+
+// Updating User..
+app.get('/update-user', (req, res) => {
+    res.render('update_user');
 })
 
 // Server Initialization.
